@@ -1,0 +1,13 @@
+node_modules
+.next
+.next-*
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+*.sqlite3
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
