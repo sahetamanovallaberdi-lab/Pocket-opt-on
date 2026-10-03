@@ -12,14 +12,14 @@ Install the Python API dependencies and start FastAPI in one terminal:
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python3 -m uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8000
+python3 -m uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8001
 ```
 
 Install frontend dependencies and start Next.js in another terminal:
 
 ```bash
 npm install
-NEXT_PUBLIC_API_URL=http://localhost:8000 npm run dev -- --hostname 0.0.0.0 --port 3000
+NEXT_PUBLIC_API_URL=http://localhost:8001 npm run dev -- --hostname 0.0.0.0 --port 3000
 ```
 
 ## Verify

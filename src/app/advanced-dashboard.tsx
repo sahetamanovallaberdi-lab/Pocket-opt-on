@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import CandleChart, { type ChartCandle } from '@/components/candle-chart';
 
-const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8001';
 const timeframes = ['30s', '1m', '5m', '15m', '30m', '1h'] as const;
 type Timeframe = (typeof timeframes)[number];
 type Tab = 'dashboard' | 'scanner' | 'backtest' | 'replay' | 'journal' | 'performance' | 'history' | 'paper' | 'settings';
@@ -113,7 +113,7 @@ export default function AdvancedDashboard() {
         setSettings({ ...defaults, ...savedSettings });
         setProviderStatus(dataStatus);
       })
-      .catch((cause: Error) => active && setError(`${cause.message}. Run the FastAPI service on port 8000.`));
+      .catch((cause: Error) => active && setError(`${cause.message}. Run the FastAPI service on port 8001.`));
     return () => { active = false; };
   }, []);
 
